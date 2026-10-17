@@ -1,0 +1,192 @@
+    <p class="nav-label">WORKSPACE</p>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="nav-item active" href="#overview"><span class="nav-icon icon-grid" aria-hidden="true"></span>Overview</a>
+      <a class="nav-item" href="#screen-time"><span class="nav-icon icon-clock" aria-hidden="true"></span>Screen time</a>
+      <a class="nav-item" href="#daily-plan"><span class="nav-icon icon-calendar" aria-hidden="true"></span>Daily plan</a>
+      <a class="nav-item" href="#focus-timer"><span class="nav-icon icon-target" aria-hidden="true"></span>Focus timer</a>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-quote">
+        <span class="quote-spark" aria-hidden="true"></span>
+        <p>Small steps, every day.</p>
+        <span>Progress over perfection.</span>
+      </div>
+      <button class="profile-button" id="profile-button" type="button">
+        <span class="avatar" id="avatar-initial">G</span>
+        <span class="profile-copy"><strong id="profile-name">Guest</strong><span id="profile-status">Your journey starts here</span></span>
+        <span class="profile-more" aria-hidden="true">···</span>
+      </button>
+    </div>
+  </aside>
+
+  <main class="main-content" id="overview">
+    <header class="topbar">
+      <div class="breadcrumb">Your space <span>/</span> <strong>Overview</strong></div>
+      <div class="topbar-actions">
+        <span class="today-label" id="today-label"></span>
+        <button class="icon-button notification-button" id="notification-button" type="button" aria-label="Enable 9 am, 6 pm, and 9 pm reminders" title="Enable reminders; the page must remain open">
+          <span class="bell-icon" aria-hidden="true"></span><span class="notification-dot"></span>
+        </button>
+        <button class="button button-outline" id="settings-button" type="button">Settings</button>
+        <button class="button button-outline sign-in-button" id="sign-in-button" type="button">Sign in</button>
+      </div>
+    </header>
+
+    <section class="welcome-row">
+      <div>
+        <p class="eyebrow">YOUR DAILY RESET</p>
+        <h1 id="greeting-title">Make today <span>count.</span></h1>
+        <p class="welcome-subtitle">A little better than yesterday. That’s the whole idea.</p>
+      </div>
+      <button class="button button-primary" id="plan-button" type="button"><span class="plus-icon" aria-hidden="true">+</span> Plan my day</button>
+    </section>
+
+    <section class="stat-grid" aria-label="Daily summary">
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-label">SCREEN TIME LOGGED</span><span class="stat-icon purple-icon icon-phone" aria-hidden="true"></span></div>
+        <div class="stat-value"><span id="screen-total">0m</span></div>
+        <div class="stat-caption">Enter the total from your phone settings</div>
+        <div class="progress-track"><span class="progress-fill blue-fill" style="width:0%"></span></div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-label">FOCUS TIME</span><span class="stat-icon blue-icon icon-target" aria-hidden="true"></span></div>
+        <div class="stat-value"><span id="focus-total">0m</span></div>
+        <div class="stat-caption" id="focus-goal-caption">of your 2h daily goal</div>
+        <div class="progress-track"><span class="progress-fill blue-fill" id="focus-progress" style="width:0%"></span></div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-label">CURRENT STREAK</span><span class="stat-icon violet-icon icon-flame" aria-hidden="true"></span></div>
+        <div class="stat-value"><span><span id="streak-count">0</span> days</span><span class="streak-badge">BEST 0</span></div>
+        <div class="stat-caption">You’re showing up. Keep going.</div>
+        <div class="streak-days" aria-label="Recent daily streak"></div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-top"><span class="stat-label">DAILY HABITS</span><span class="stat-icon green-icon icon-check" aria-hidden="true"></span></div>
+        <div class="stat-value"><span><span id="habits-done">0</span><span class="muted-value"> / 6</span></span><span class="stat-change neutral" id="habits-status">GETTING STARTED</span></div>
+        <div class="stat-caption" id="habits-caption">0 habits complete today</div>
+        <div class="progress-track"><span class="progress-fill green-fill" id="habits-progress" style="width:50%"></span></div>
+      </article>
+    </section>
+
+    <section class="middle-grid">
+      <article class="panel goal-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">YOUR NORTH STAR</p><h2>Your current focus</h2></div>
+          <span class="soft-icon icon-target" aria-hidden="true"></span>
+        </div>
+        <div class="selected-goal-card"><span class="goal-symbol goal-all" id="selected-goal-symbol" aria-hidden="true"></span><div><h3 id="selected-goal-title">All of the above</h3><p id="selected-goal-description">A little progress in every area.</p></div></div>
+        <button class="text-button change-goal-button" id="change-goal" type="button">Change your plan in settings</button>
+      </article>
+
+      <article class="panel focus-panel" id="focus-timer">
+        <div class="panel-heading">
+          <div><p class="eyebrow">MAKE SPACE TO FOCUS</p><h2>Focus timer</h2></div>
+          <button class="text-button" id="timer-settings" type="button">Set timer</button>
+        </div>
+        <p class="panel-description">One thing at a time. Give it your attention.</p>
+        <div class="timer-ring" id="timer-ring">
+          <div class="timer-inner"><span class="timer-label" id="timer-label">READY WHEN YOU ARE</span><strong id="timer-display">25:00</strong><span class="timer-session" id="timer-session">Focus session</span></div>
+        </div>
+        <div class="timer-actions"><button class="button button-primary timer-start" id="timer-start" type="button">Start focus</button><button class="icon-button reset-button" id="timer-reset" type="button" aria-label="Reset timer" title="Reset timer"><span class="reset-icon" aria-hidden="true"></span></button></div>
+        <div class="timer-presets"><button class="preset active" data-minutes="25" type="button">25 min</button><button class="preset" data-minutes="45" type="button">45 min</button><button class="preset" data-minutes="60" type="button">60 min</button><button class="preset custom-preset" id="custom-timer-button" type="button">Custom</button></div>
+      </article>
+    </section>
+
+    <section class="bottom-grid">
+      <article class="panel schedule-panel" id="daily-plan">
+        <div class="panel-heading">
+          <div><p class="eyebrow">MADE FOR YOUR GOAL</p><h2>Your day, with intention</h2></div>
+          <button class="text-button" id="refresh-plan" type="button">Add activity</button>
+        </div>
+        <p class="panel-description" id="plan-description">A balanced rhythm built around your focus and energy.</p>
+        <div class="schedule-list" id="schedule-list"></div>
+        <div class="plan-details" id="plan-details"></div>
+      </article>
+
+      <article class="panel screen-panel" id="screen-time">
+        <div class="panel-heading">
+          <div><p class="eyebrow">AWARENESS, NOT JUDGMENT</p><h2>Screen time</h2></div>
+          <label class="screen-period-label" for="screen-period">Period</label>
+          <select class="select-button" id="screen-period" aria-label="Screen time period"><option value="today">Today</option><option value="week">Last 7 days</option></select>
+        </div>
+        <div class="screen-total"><strong id="screen-total-large">0m</strong><span id="screen-total-caption">phone use logged today</span></div>
+        <div class="usage-chart"><p>Log your phone’s Screen Time or Digital Wellbeing totals above to keep this record accurate.</p></div>
+        <div class="app-usage-heading"><strong>Your app usage</strong><span class="app-usage-actions"><button class="text-button" id="edit-usage" type="button">Edit total</button><button class="text-button" id="log-app-usage" type="button">Log app time</button></span></div>
+        <div class="app-usage-list" id="app-usage-list"></div>
+        <button class="device-access-link" id="device-access" type="button">How to connect phone usage</button>
+        <p class="tracking-note"><span class="info-mark" aria-hidden="true">i</span> This web preview cannot request operating-system usage access. Phone and per-app totals shown here are entered by you, not collected automatically.</p>
+      </article>
+    </section>
+
+    <footer class="page-footer"><span>Progress is personal. Keep showing up.</span><button id="streak-widget-button" class="footer-link" type="button">Streak widget: <strong id="widget-state">Off</strong></button></footer>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog class="app-dialog" id="auth-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <div class="dialog-brand"><span class="brand-mark"><svg viewBox="0 0 40 40" fill="none"><path d="M8 29.5 19.7 8l12.2 21.5H8Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M13.2 29.5 20 17l7.1 12.5M12 22h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>kaizen<span class="brand-period">.</span></span></div>
+  <p class="eyebrow">YOUR JOURNEY, YOUR PACE</p>
+  <h2 id="auth-title">Welcome back.</h2>
+  <p class="dialog-subtitle" id="auth-subtitle">Sign in to pick up where you left off.</p>
+  <form id="auth-form">
+    <label class="auth-field" id="name-field" hidden>Your name<input id="auth-name" type="text" autocomplete="name" placeholder="How should we call you?"></label>
+    <div id="signup-preferences" hidden>
+      <label class="auth-field">Your main goal<select id="signup-goal"><option value="productivity">Increase productivity</option><option value="sleep">Better sleep</option><option value="health">Overall better health</option><option value="faith">Closer to God</option><option value="all">All of the above</option></select></label>
+      <label class="auth-field">Movement level<select id="signup-exercise-level"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="pro">Pro</option></select></label>
+      <label class="auth-field">Nutrition focus<select id="signup-diet-goal"><option value="slim">Weight loss (slim down)</option><option value="gain">Build weight and strength</option></select></label>
+    </div>
+    <label class="auth-field">Email address<input id="auth-email" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+    <label class="auth-field">Password<input id="auth-password" type="password" autocomplete="current-password" placeholder="At least 8 characters" minlength="8" required></label>
+    <p class="auth-error" id="auth-error" role="alert"></p>
+    <button class="button button-primary auth-submit" id="auth-submit" type="submit">Sign in</button>
+  </form>
+  <p class="auth-switch"><span id="auth-switch-copy">New to Kaizen?</span> <button type="button" id="auth-switch">Create an account</button></p>
+  <p class="privacy-note">This demo keeps your account on this device and never stores your password. Use a unique password; production accounts require a secure server.</p>
+</dialog>
+<dialog class="app-dialog small-dialog" id="settings-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <p class="eyebrow">MAKE IT YOURS</p><h2>Plan settings.</h2><p class="dialog-subtitle">Your selected goal stays in place until you change it here.</p>
+  <form id="settings-form">
+    <label class="auth-field">Daily goal<select id="settings-goal"><option value="productivity">Increase productivity</option><option value="sleep">Better sleep</option><option value="health">Overall better health</option><option value="faith">Closer to God</option><option value="all">All of the above</option></select></label>
+    <label class="auth-field">Exercise level<select id="settings-exercise-level"><option value="beginner">Beginner</option><option value="intermediate">Intermediate</option><option value="pro">Pro</option></select></label>
+    <label class="auth-field">Nutrition focus<select id="settings-diet-goal"><option value="slim">Weight loss (slim down)</option><option value="gain">Build weight and strength</option></select></label>
+    <button class="button button-primary auth-submit" type="submit">Save settings</button>
+  </form>
+  <p class="privacy-note">Exercise routines use bodyweight only. Meal ideas are general examples, not medical nutrition advice.</p>
+</dialog>
+
+<dialog class="app-dialog small-dialog" id="plan-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <p class="eyebrow">A SMALL STEP IS STILL A STEP</p><h2>Plan a little progress.</h2><p class="dialog-subtitle">Choose something you can do today. It will be added to your daily plan.</p>
+  <form id="plan-form"><label class="auth-field">Activity<select id="plan-activity"><option value="Work">Work / focus</option><option value="Sleep">Sleep wind-down</option><option value="Hydration">Hydration</option><option value="Exercise">Exercise</option><option value="Reading">Reading</option><option value="Meditation">Meditation / prayer</option></select></label><label class="auth-field">Duration<select id="plan-duration"><option value="15">15 minutes</option><option value="20">20 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option></select></label><button class="button button-primary auth-submit" type="submit">Add to my day</button></form>
+</dialog>
+<dialog class="app-dialog small-dialog" id="timer-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <p class="eyebrow">CHOOSE YOUR SESSION</p><h2>Set a timer.</h2><p class="dialog-subtitle">Choose an activity and duration. Your timer will be ready to start.</p>
+  <form id="timer-form">
+    <label class="auth-field">Activity<select id="timer-activity"><option>Focus session</option><option>Work / focus</option><option>Exercise</option><option>Hydration</option><option>Reading</option><option>Meditation / prayer</option><option>Sleep wind-down</option></select></label>
+    <label class="auth-field">Duration<select id="timer-duration"><option value="5">5 minutes</option><option value="10">10 minutes</option><option value="15">15 minutes</option><option value="20">20 minutes</option><option value="25" selected>25 minutes</option><option value="30">30 minutes</option><option value="45">45 minutes</option><option value="60">60 minutes</option><option value="90">90 minutes</option><option value="120">120 minutes</option><option value="custom">Custom duration</option></select></label>
+    <label class="auth-field" id="custom-duration-field" hidden>Custom duration in minutes<input id="custom-duration" type="number" min="1" max="720" step="1" value="25"></label>
+    <button class="button button-primary auth-submit" type="submit">Set timer</button>
+  </form>
+</dialog>
+<dialog class="app-dialog small-dialog" id="usage-total-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <p class="eyebrow">YOUR PHONE, YOUR DATA</p><h2>Log total screen time.</h2><p class="dialog-subtitle">Enter the total shown in your phone’s Screen Time or Digital Wellbeing settings.</p>
+  <form id="usage-total-form"><label class="auth-field">Total phone use today, in minutes<input id="usage-total-minutes" type="number" min="0" max="1440" step="1" required></label><button class="button button-primary auth-submit" type="submit">Save total</button></form>
+</dialog>
+<dialog class="app-dialog small-dialog" id="app-usage-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <p class="eyebrow">MANUAL ENTRY</p><h2>Log an app.</h2><p class="dialog-subtitle">Copy the time from your phone settings. Kaizen’s web version cannot read other apps directly.</p>
+  <form id="app-usage-form"><label class="auth-field">App name<input id="usage-app-name" type="text" maxlength="40" placeholder="For example, Messages" required></label><label class="auth-field">Minutes used today<input id="usage-app-minutes" type="number" min="1" max="1440" step="1" required></label><button class="button button-primary auth-submit" type="submit">Add app time</button></form>
+</dialog>
+<dialog class="app-dialog" id="device-access-dialog">
+  <form method="dialog" class="dialog-close-form"><button class="dialog-close" aria-label="Close" value="cancel" type="submit">×</button></form>
+  <p class="eyebrow">DEVICE USAGE ACCESS</p><h2>Phone-wide tracking needs a native app.</h2>
+  <p class="dialog-subtitle">A website cannot ask Android or iOS for permission to read time spent in other apps. This preview does not collect that data. You can enter the totals shown in your phone settings above.</p>
+  <div class="permission-guide"><h3>Android</h3><p>In a native Kaizen app, grant <strong>Usage access</strong> from Settings → Apps → Special app access → Usage access. The app must request that access and explain how the data is used.</p><h3>iPhone</h3><p>Automatic Screen Time integrations require a signed native app with Apple’s Family Controls entitlement and the user’s authorization. A browser page cannot request it.</p></div>
+  <button class="button button-primary auth-submit" id="permission-guide-done" type="button">Got it</button>
+</dialog>
+<script src="app.js"></script>
