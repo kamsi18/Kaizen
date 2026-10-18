@@ -1,6 +1,4 @@
 # Kaizen
-A lightweight daily wellness and productivity dashboard for building better habits one small step at a time.
-# Kaizen
 
 Kaizen is a lightweight daily wellness and productivity dashboard for building better habits one small step at a time. It combines focus tracking, screen-time logging, daily planning, exercise guidance, and reflection prompts into a single personal dashboard.
 
@@ -67,6 +65,7 @@ http://localhost:8000
 - The app stores data in the browser using `localStorage`, so progress is saved on the current device.
 - There is no backend database or login service; the sign-in flow is a front-end experience for local use.
 - This is designed as a personal productivity tool rather than a full multi-user application.
+- Exercise and meal suggestions are general suggestions, not medical advice.
 
 ## License
 
